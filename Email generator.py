@@ -18,7 +18,7 @@ def gen(count):
         DEPT=str(input("Enter you Department :")).lower()
         DOMAIN=input("Enter the Domain  Name Given by your E-Mail Provider :").lower()
         TLD=input("Enter your TLD Name : ").lower()
-        email=str(NAME)+str(INITIAL)+"."+str(BATCH)+str(DEPT)+"@"+DOMAIN+TLD
+        email=str(NAME)+str(INITIAL)+"."+str(BATCH)+str(DEPT)+"@"+DOMAIN+"."+TLD
         MAILBOX.append(email)
         REMAINING=int(count)-int(i+1)
         print("{} Mail Id's to be Genrated".format(REMAINING))
@@ -28,9 +28,16 @@ def gen(count):
 
 #Fucntion Prints the  Generrated Mail Id's
 def mailprinter(MAILBOX):
+    count=0
+    st="*"
+    for i in range(10):
+        time.sleep(1)
+        print(i*st,end='')
+    print("\nGenerating E-Mail's...")
     for i in MAILBOX:
         time.sleep(1)
-        print(i)
+        count += 1
+        print("{0} . {1} ".format(count,i))
 
 #Driver Code
 NO=int(input("Enter the No of Emails to be Generated :"))
