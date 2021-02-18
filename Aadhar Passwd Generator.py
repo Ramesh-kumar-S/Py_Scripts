@@ -30,8 +30,7 @@ def Printer(SPLITTER):
     decorator()
 
 
-#NAME=input("Enter your Name :")
-#DOB=input("Enter the Date of Birth :")
+
 
 COUNT=input("Enter the Number of Passwords to be Generated :")
 counter(COUNT)
